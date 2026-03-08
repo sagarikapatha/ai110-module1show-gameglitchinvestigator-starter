@@ -6,9 +6,7 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 
 - What did the game look like the first time you ran it?
 - List at least two concrete bugs you noticed at the start  
-  (for example: "the secret number kept changing" or "the hints were backwards").
-  
-When I first ran the game, the Streamlit page opened and showed the title “Game Glitch Investigator” with a box to enter guesses, difficulty settings, and the score, etc. The interface looked simple, so I started playing couple of rounds with different inputs and difficulty level. While playing it, I noticed some problems with the game behavior.They are:
+  (for example: "the secret number kept changing" or "the hints were backwards").  When I first ran the game, the Streamlit page opened and showed the title “Game Glitch Investigator” with a box to enter guesses, difficulty settings, and the score, etc. The interface looked simple, so I started playing couple of rounds with different inputs and difficulty level. While playing it, I noticed some problems with the game behavior.They are:
 Bug1: The hints were incorrect, because when my guess was higher than the secret number the game told me to go higher instead of telling me to go lower. 
 Bug2: Changing the difficulty level did not seem to fully affect the game, since the guessing range shown on the screen still looked the same. 
 Bug3: While clicking on “New Game,” the game did not restart but the secret number was changing(everytime I click new game), and some information from the previous round seemed to remain.
