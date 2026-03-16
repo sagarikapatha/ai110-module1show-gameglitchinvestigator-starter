@@ -25,13 +25,45 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
+- [ ] Describe the game's purpose.\
+The application is a number guessing game built with Streamlit.\
+The game generates a secret number.\
+The player must guess the number within a limited number of attempts.\
+After each guess the game provides hints:\
+   -Too High → Go LOWER\
+   -Too Low → Go HIGHER\
+The game tracks attempts and calculates a score.\
+
 - [ ] Detail which bugs you found.
+### Bugs Found
+While testing the game, I discovered several issues:
+1. **Incorrect Hint Logic**
+   The hints for guesses were reversed. When the guess was higher than the secret number, the game sometimes suggested going higher instead of lower. I fixed this in the `check_guess` function.
+2. **Input Field Did Not Reset**
+   After submitting a guess, the text input box kept the previous value instead of clearing. I fixed this by updating the Streamlit input handling so the textbox resets after each submission.
+3. **Difficulty level not fully applied** 
+   Changing the difficulty level did not fully affect the game, and the displayed guessing range appeared unchanged.
+4. **New Game did not reset the game state properly** 
+   Clicking **New Game** changed the secret number but some information from the previous round remained.
+5. **Incorrect difficulty ranges** 
+   The number ranges assigned to difficulty levels were inconsistent.
+
 - [ ] Explain what fixes you applied.
+## 🔧 Fixes Applied
+Several improvements were made to repair the game:
+- **Refactored the core logic functions** into `logic_utils.py` to separate game logic from the Streamlit UI.
+- **Fixed the high/low hint logic** so the game correctly tells the player when to guess higher or lower.
+- **Corrected difficulty range handling** so the selected difficulty properly affects the guessing range.
+- **Reset the input field after each guess** to improve the user experience.
+- **Improved game state handling** so the secret number and game progress remain consistent during gameplay.
+- **Added pytest tests** to verify the guessing logic and confirm the fixes work correctly.
 
 ## 📸 Demo
 
 - [ ] [Insert a screenshot of your fixed, winning game here]
+![Winning Game Screenshot](images/game-demo.png)
+![Test passing screenshot](images/pytest.png)
+
 
 ## 🚀 Stretch Features
 

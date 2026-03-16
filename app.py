@@ -1,5 +1,6 @@
 import random
 import streamlit as st
+# FIXME: Moved game logic out of app.py into logic_utils.py with Copilot Agent help to keep UI and logic separate.
 from logic_utils import get_range_for_difficulty, parse_guess, check_guess, update_score
 
 st.set_page_config(page_title="Glitchy Guesser", page_icon="🎮")
